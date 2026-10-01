@@ -255,7 +255,7 @@
 			sensor-bindings = <&inc_dec_kp LG(RIGHT) LG(LEFT)>;
 		};
 		middle_held {
-			bindings = <&mic_mute &trans &monitor>;
+			bindings = <&mic_mute &trans &no_such_behaviour>;
 			sensor-bindings = <&inc_dec_kp LC(LS(Z)) LC(Z)>;
 		};
 		right_held {
