@@ -227,8 +227,11 @@
 
 	combos {
 		compatible = "zmk,combos";
+		// 180 ms, not 100: with middle down first, a third key landing after the window
+		// was read on middle's layer, as microphone mute and monitor. It has to stay
+		// under the 200 ms that decides a hold.
 		combo_all {
-			timeout-ms = <100>;
+			timeout-ms = <180>;
 			key-positions = <0 1 2>;
 			bindings = <&ht_all 0 0>;
 		};
