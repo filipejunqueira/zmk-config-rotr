@@ -36,6 +36,10 @@ CONFIG_ZMK_RGB_UNDERGLOW_SPD_START=2
 CONFIG_ZMK_RGB_UNDERGLOW_AUTO_OFF_IDLE=y
 # Lights off 2 to 3 s after the last touch (the default is 30 s)
 CONFIG_ZMK_IDLE_TIMEOUT=2000
+# The shared macro queue (default 64 items, the newest dropped silently when it is full): each
+# hold routine queues 27 and the microphone routine 28, so a middle hold and two microphone
+# toggles are 83
+CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE=256
 CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
 CONFIG_BUILD_OUTPUT_UF2=y
 CONFIG_ZMK_RGB_UNDERGLOW_EXT_POWER=y
